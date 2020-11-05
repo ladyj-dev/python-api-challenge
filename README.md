@@ -1,10 +1,11 @@
-# python-api-challenge
-Create a Python script to visualize the weather of 500+ cites across the world of varying distance from the equator.
-"What's the weather like as we approach the equator?"
-efore You Begin
+## Python Api Challenge
+
+![sunny.png](sunny.png)
+
+*Before You Begin*
 
 
-Create a new repository for this project called python-api-challenge. Do not add this homework to an existing repository.
+Create a new repository for this project called python-api-challenge. **Do not add this homework to an existing repository**.
 
 
 Clone the new repository to your computer.
@@ -20,26 +21,26 @@ Push the above changes to GitHub.
 
 
 
-Part I - WeatherPy
+## Part I - WeatherPy
 In this example, you'll be creating a Python script to visualize the weather of 500+ cities across the world of varying distance from the equator. To accomplish this, you'll be utilizing a simple Python library, the OpenWeatherMap API, and a little common sense to create a representative model of weather across world cities.
 Your first requirement is to create a series of scatter plots to showcase the following relationships:
 
-Temperature (F) vs. Latitude
-Humidity (%) vs. Latitude
-Cloudiness (%) vs. Latitude
-Wind Speed (mph) vs. Latitude
+* Temperature (F) vs. Latitude
+* Humidity (%) vs. Latitude
+* Cloudiness (%) vs. Latitude
+* Wind Speed (mph) vs. Latitude
 
 After each plot add a sentence or too explaining what the code is and analyzing.
 Your second requirement is to run linear regression on each relationship, only this time separating them into Northern Hemisphere (greater than or equal to 0 degrees latitude) and Southern Hemisphere (less than 0 degrees latitude):
 
-Northern Hemisphere - Temperature (F) vs. Latitude
-Southern Hemisphere - Temperature (F) vs. Latitude
-Northern Hemisphere - Humidity (%) vs. Latitude
-Southern Hemisphere - Humidity (%) vs. Latitude
-Northern Hemisphere - Cloudiness (%) vs. Latitude
-Southern Hemisphere - Cloudiness (%) vs. Latitude
-Northern Hemisphere - Wind Speed (mph) vs. Latitude
-Southern Hemisphere - Wind Speed (mph) vs. Latitude
+* Northern Hemisphere - Temperature (F) vs. Latitude
+* Southern Hemisphere - Temperature (F) vs. Latitude
+* Northern Hemisphere - Humidity (%) vs. Latitude
+* Southern Hemisphere - Humidity (%) vs. Latitude
+* Northern Hemisphere - Cloudiness (%) vs. Latitude
+* Southern Hemisphere - Cloudiness (%) vs. Latitude
+* Northern Hemisphere - Wind Speed (mph) vs. Latitude
+* Southern Hemisphere - Wind Speed (mph) vs. Latitude
 
 After each pair of plots explain what the linear regression is modeling such as any relationships you notice and any other analysis you may have.
 Your final notebook must:
@@ -49,12 +50,13 @@ Perform a weather check on each of the cities using a series of successive API c
 Include a print log of each city as it's being processed with the city number and city name.
 Save a CSV of all retrieved data and a PNG image for each scatter plot.
 
+![vacay.png](vacay.png)
 
-Part II - VacationPy
+## Part II - VacationPy
 Now let's use your skills in working with weather data to plan future vacations. Use jupyter-gmaps and the Google Places API for this part of the assignment.
 
 
-***Note: Remember that any API usage beyond the $200 credit will be charged to your personal account. You can set quotas and limits to your daily requests to be sure you can't be charged. Check out Google Maps Platform Billing and Manage your cost of use for more information.
+Note: Remember that any API usage beyond the $200 credit will be charged to your personal account. You can set quotas and limits to your daily requests to be sure you can't be charged. Check out Google Maps Platform Billing and Manage your cost of use for more information.
 
 
 Note: if you having trouble displaying the maps try running jupyter nbextension enable --py gmaps in your environment and retry.
@@ -62,28 +64,46 @@ Note: if you having trouble displaying the maps try running jupyter nbextension 
 
 Create a heat map that displays the humidity for every city from the part I of the homework.
 
-Narrow down the DataFrame to find your ideal weather condition. 
+
+
+**Narrow down the DataFrame to find your ideal weather condition. For example:
+
+
+1.) A max temperature lower than 50 degrees but higher than 70.
+
+
+2.) Wind speed less than 5 mph.
+
+
+3.) Zero cloudiness.
+
 
 Drop any rows that don't contain all three conditions. You want to be sure the weather is ideal.
 
 
-****Note: Feel free to adjust to your specifications but be sure to limit the number of rows returned by your API requests to a reasonable number.
+Note: Feel free to adjust to your specifications but be sure to limit the number of rows returned by your API requests to a reasonable number.
+
+
+
 
 Using Google Places API to find the first hotel for each city located within 5000 meters of your coordinates.
 
+
 Plot the hotels on top of the humidity heatmap with each pin containing the Hotel Name, City, and Country.
+
+
 
 As final considerations:
 
 Create a new GitHub repository for this project called API-Challenge (note the kebab-case). Do not add to an existing repo
 
 You must complete your analysis using a Jupyter notebook.
+
 You must use the Matplotlib or Pandas plotting libraries.
-For Part I, you must include a written description of three observable trends based on the data.
-For Part II, you must include a screenshot of the heatmap you create and include it in your submission.
-You must use proper labeling of your plots, including aspects like: Plot Titles (with date of analysis) and Axes Labels.
-For max intensity in the heat map, try setting it to the highest humidity found in the data set.
 
-Remember that each coordinate will trigger a separate call to the Google API. If you're creating your own criteria to plan your vacation, try to reduce the results in your DataFrame to 10 or fewer cities.
+For *Part I*, you must include a written description of three observable trends based on the data.
 
-Ensure your repository has regular commits (i.e. 20+ commits) and a thorough README.md file
+For *Part II*, you must include a screenshot of the heatmap you create and include it in your submission.
+
+You must use proper labeling of your plots.
+
